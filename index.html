@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f766e">
+<title>Nursing Study Hub — Full Curriculum</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#687386;--primary:#0f766e;--soft:#dff5f1;--border:#e4e8ef}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text)}
+header{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;padding:24px 18px 28px;border-radius:0 0 26px 26px}
+header h1{margin:0 0 5px;font-size:27px}header p{margin:0;opacity:.9}
+main{max-width:900px;margin:auto;padding:16px}
+.search{margin-top:-8px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:13px;box-shadow:0 5px 20px #0000000c;width:100%;font-size:16px}
+.section-title{display:flex;justify-content:space-between;align-items:center;margin:22px 2px 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:11px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:17px;padding:16px;cursor:pointer;transition:.15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 18px #0000000b}.icon{font-size:27px}.card b{display:block;margin-top:8px}.card small{color:var(--muted)}
+button{border:0;border-radius:12px;padding:10px 14px;background:var(--primary);color:#fff;font-weight:600;cursor:pointer}
+.secondary{background:var(--soft);color:var(--primary)}
+.hidden{display:none}.back{margin:8px 0 15px}.note{background:var(--card);border:1px solid var(--border);border-radius:17px;padding:18px;line-height:1.55}
+.note h2{margin-top:0}.note h3{color:var(--primary)}li{margin:7px 0}
+.quiz{background:var(--card);border:1px solid var(--border);border-radius:17px;padding:18px;margin-top:14px}.option{display:block;width:100%;margin:8px 0;background:#f1f4f8;color:var(--text);text-align:left}.option.correct{background:#d9f5e5}.option.wrong{background:#ffe0e0}
+footer{text-align:center;color:var(--muted);padding:30px 10px;font-size:13px}
+</style>
+</head>
+<body>
+<style>
+body{background:#f7f9fc}
+.sitebar{position:sticky;top:0;z-index:50;background:#0b3954;color:#fff;padding:12px 16px;display:flex;gap:14px;align-items:center;justify-content:space-between;box-shadow:0 2px 8px #0002}
+.sitebar a{color:#fff;text-decoration:none;font-weight:700;margin-left:10px}
+.hero{margin:16px auto;max-width:1100px;padding:28px;border-radius:18px;background:linear-gradient(135deg,#0b3954,#087e8b);color:white}
+.price{display:inline-block;background:#ffd166;color:#111;padding:8px 14px;border-radius:999px;font-weight:800;margin-top:8px}
+.download-card{max-width:1100px;margin:16px auto;padding:20px;background:#fff;border-radius:16px;box-shadow:0 4px 18px #0001}
+.download-card button{background:#0b3954;color:white;border:0;border-radius:10px;padding:11px 16px;font-weight:700}
+.lock{font-size:20px}
+.disclosure{font-size:12px;color:#667085}
+</style>
+<div class="sitebar">
+  <strong>🩺 Nursing Study Hub</strong>
+  <nav><a href="../student/index.html">Study</a><a href="#paid">Downloads</a><a href="#about">About</a></nav>
+</div>
+<section class="hero">
+  <h1>Nursing notes & questions in one place</h1>
+  <p>Study the full nursing curriculum, practise MCQs, and access downloadable revision packs.</p>
+  <span class="price">Download packs from KSh 50</span>
+</section>
+<section id="paid" class="download-card">
+  <h2>🔒 Premium Downloads — KSh 50</h2>
+  <p>Selected subject notes, revision questions and practice packs can be offered as paid downloads.</p>
+  <ul>
+    <li>Full topic notes</li>
+    <li>Revision questions and MCQs</li>
+    <li>Exam-focused practice packs</li>
+    <li>Downloadable PDF format</li>
+  </ul>
+  <button onclick="alert('Payment gateway placeholder: connect your chosen payment provider before accepting real payments.')">Pay KSh 50 & Download</button>
+  <p class="disclosure">Payment is not connected in this demo. A real payment gateway and protected download system must be connected before launch.</p>
+</section>
+
+<header><h1>🩺 Nursing Study Hub</h1><p>Notes • MCQs • Revision • Exam practice</p></header>
+<main>
+<input id="search" class="search" placeholder="Search subjects, topics or keywords…" oninput="searchSubjects()">
+<div id="home">
+<div class="section-title"><h2>Subjects</h2><button class="secondary" onclick="showQuiz()">Quick Quiz</button></div>
+<div id="subjects" class="grid"></div>
+
+<div class="section-title"><h2>Curriculum map</h2></div>
+<div class="note">
+<p><b>Suggested progression</b> — institutions differ in exact semester titles and subject placement, so this map is a study organization rather than an official college timetable.</p>
+<div class="grid">
+<div class="card"><b>Year 1 • Foundation</b><small>Fundamentals, Anatomy & Physiology, Psychology, Sociology & Anthropology, Communication, Professionalism, Microbiology</small></div>
+<div class="card"><b>Year 2 • Core nursing</b><small>Pharmacology I–II, Medical-Surgical I–II, Community Health, Health Care Delivery, Midwifery I, Nutrition</small></div>
+<div class="card"><b>Year 3 • Advanced nursing</b><small>Medical-Surgical III–IV, Midwifery II–III, Paediatric, Mental Health, Emergency/Critical Care</small></div>
+<div class="card"><b>Final preparation</b><small>Leadership, Research, Informatics, Clinical Practicum, Research Project and integrated examination revision</small></div>
+</div>
+</div>
+<div class="section-title"><h2>Study tools</h2></div>
+<div class="grid">
+<div class="card" onclick="showQuiz()"><div class="icon">📝</div><b>MCQ Practice</b><small>Test yourself</small></div>
+<div class="card" onclick="showProgress()"><div class="icon">📈</div><b>Progress</b><small>Track revision</small></div>
+<div class="card" onclick="alert('Tip: Search a subject, open a topic, then mark it complete after studying.')"><div class="icon">💡</div><b>Study Tip</b><small>Use active recall</small></div>
+</div>
+</div>
+<div id="content" class="hidden"></div>
+</main>
+<footer>Nursing Study Hub • Educational revision tool. Always use your institution's current curriculum and clinical guidelines.</footer>
+<script>
+const data={
+"Fundamentals of Nursing":{i:"🩺",topics:["Nursing profession","Nursing process","Vital signs","Health assessment","Infection prevention","Asepsis and sterilization","Patient safety","Hygiene and comfort","Nutrition and feeding","Elimination","Mobility and positioning","Pain management","Medication administration","Wound care","Fluid and electrolyte balance","Admission and discharge","Documentation","Health education","Death and dying"],notes:{}},
+"Anatomy & Physiology":{i:"🫀",topics:["Cell and tissues","Skeletal system","Muscular system","Nervous system","Brain and spinal cord","Special senses","Endocrine system","Cardiovascular system","Blood and immunity","Respiratory system","Digestive system","Urinary system","Male reproductive system","Female reproductive system","Lymphatic system","Skin and temperature regulation"],notes:{}},
+"Pharmacology I":{i:"💊",topics:["Pharmacokinetics and pharmacodynamics","Routes of administration","Medication calculations","Drug safety","Adverse drug reactions","Autonomic drugs","Analgesics","Anti-inflammatory drugs","Antimicrobials","Antimalarials","Anthelmintics","Drugs for the respiratory system","Drugs for the gastrointestinal system","Vitamins and minerals","Emergency medicines"],notes:{}},
+"Pharmacology II":{i:"💉",topics:["Cardiovascular drugs","Antihypertensives","Diuretics","Anticoagulants","Endocrine drugs","Insulin and antidiabetics","Corticosteroids","CNS drugs","Antiepileptics","Psychiatric medicines","Obstetric medicines","Paediatric medicines","Chemotherapy principles","IV medicines and compatibility"],notes:{}},
+"Psychology":{i:"🧠",topics:["Introduction to psychology","Branches of psychology","Psychology laws","Personality","Maslow hierarchy","Learning theories","Classical conditioning","Operant conditioning","Growth and development","Memory","Factors affecting memory","Stress","Stress in patients","Motivation","Emotion","Coping and adaptation"],notes:{}},
+"Sociology & Anthropology":{i:"👥",topics:["Introduction to sociology","Culture","Socialisation","Agents of socialisation","Social groups","Social interaction","Social institutions","Family","Community","Social stratification","Deviance","Health and illness","Anthropology","Culture and health","Beliefs and health behaviour"],notes:{}},
+"Communication Skills":{i:"💬",topics:["Communication process","Principles of communication","Verbal communication","Non-verbal communication","Therapeutic communication","Active listening","Interviewing","Barriers to communication","Conflict","Conflict resolution","Group communication","Health education communication","Counselling basics","Communication in nursing documentation"],notes:{}},
+"Professionalism & Ethics":{i:"⚖️",topics:["Nursing as a profession","Professional values","Code of ethics","ICN principles","Beneficence","Non-maleficence","Autonomy","Justice","Confidentiality","Consent","Nurse-client relationship","Phases of nurse-client relationship","Professional boundaries","Accountability","Competence","Reflection","Legal responsibilities","Professional councils and regulation"],notes:{}},
+"Microbiology":{i:"🦠",topics:["Introduction to microbiology","Bacteria","Viruses","Fungi","Protozoa","Helminths","Normal flora","Microbial infection","Chain of infection","Modes of transmission","Infectious diseases","Immunity","Specimen collection","Culture and sensitivity","Sterilization","Disinfection","Antimicrobial resistance","Healthcare-associated infections"],notes:{}},
+"Community Health Nursing":{i:"🌍",topics:["Introduction to community health","Primary health care","Community diagnosis","Community assessment","Home visits","Family health","Factors affecting family health","Health promotion","Health education","IEC","Community participation","Community mobilization","Community projects","School health","Occupational health","Environmental health","Epidemiology","Disease prevention","Community health strategy"],notes:{}},
+"Health Care Delivery":{i:"🏥",topics:["Health system concepts","Levels of health care","Pillars of health system delivery","Primary health care","Referral system","Health planning","Health policy","Health financing","Universal health coverage","Health promotion","Kenya health system","Kenya Vision 2030","SDGs","MDGs","Global health conferences","Quality of care"],notes:{}},
+"Midwifery I":{i:"🤰",topics:["Introduction to midwifery","Female reproductive anatomy","Pelvis and pelvic landmarks","Pelvic joints and ligaments","Fertilisation","Implantation","Fetal development","Fetal circulation","Signs of pregnancy","Antenatal care","Physiological changes in pregnancy","Minor disorders of pregnancy","Antenatal education","Normal labour","Stages of labour","Mechanism of labour","Fetal diameters","Partograph","Essential care during labour","Third stage management"],notes:{}},
+"Midwifery II":{i:"👶",topics:["High-risk pregnancy","Antepartum haemorrhage","Hypertensive disorders","Gestational diabetes","Preterm labour","PROM","Malpositions and malpresentations","Obstructed labour","Induction of labour","Augmentation","Caesarean birth","Postpartum haemorrhage","Puerperal sepsis","Postnatal care","Breastfeeding","Family planning","Newborn assessment"],notes:{}},
+"Midwifery III":{i:"🍼",topics:["Complicated puerperium","Maternal emergencies","Newborn emergencies","Neonatal resuscitation principles","Prematurity","Low birth weight","Birth asphyxia","Neonatal infection","Kangaroo mother care","Neonatal jaundice","Congenital abnormalities","High-risk newborn","Maternal and newborn referral","Community midwifery","Maternal mortality prevention"],notes:{}},
+"Medical-Surgical Nursing I":{i:"🏥",topics:["Medical-surgical nursing principles","Health assessment","Respiratory disorders","Asthma","Pneumonia","Tuberculosis","COPD","Cardiovascular disorders","Hypertension","Heart failure","Coronary artery disease","Blood disorders","Anaemia","Fluid and electrolyte disorders","Shock"],notes:{}},
+"Medical-Surgical Nursing II":{i:"🩻",topics:["Diabetes mellitus","Endocrine disorders","Gastrointestinal disorders","Peptic ulcer disease","Hepatitis","Liver disorders","Renal disorders","Acute kidney injury","Chronic kidney disease","Urinary disorders","Neurological disorders","Stroke","Epilepsy","Meningitis","Cancer principles"],notes:{}},
+"Medical-Surgical Nursing III":{i:"🧑‍⚕️",topics:["Musculoskeletal disorders","Fractures","Arthritis","Osteomyelitis","Skin disorders","Burns","Chronic wounds","Septic wounds","Eye disorders","Ear disorders","Nose and throat disorders","Perioperative nursing","Preoperative care","Postoperative care","Pain management"],notes:{}},
+"Medical-Surgical Nursing IV":{i:"🚑",topics:["Emergency nursing","Trauma nursing","Critical care","Sepsis","Shock management","Respiratory emergencies","Cardiac emergencies","Neurological emergencies","Poisoning principles","Disaster nursing","Palliative care","Oncology nursing","Rehabilitation","Gerontological nursing","Complex patient care"],notes:{}},
+"Paediatric Nursing":{i:"🧒",topics:["Growth and development","Child health assessment","Immunization","Nutrition in children","Neonatal care","Common childhood infections","Pneumonia","Diarrhoea","Malaria","Meningitis","Malnutrition","Dehydration","Congenital disorders","Childhood emergencies","Integrated management of childhood illness","Child protection"],notes:{}},
+"Psychiatric & Mental Health Nursing":{i:"🧠",topics:["Mental health concepts","Mental illness","Mental status examination","Therapeutic communication","Schizophrenia","Mood disorders","Anxiety disorders","Substance use disorders","Personality disorders","Crisis intervention","Psychiatric medications","Psychiatric emergencies","Rehabilitation","Community mental health","Mental health nursing care plans"],notes:{}},
+"Emergency & Critical Care Nursing":{i:"🚨",topics:["Triage","Primary survey","Airway and breathing","Circulation","Basic life support principles","Shock","Sepsis","Acute respiratory failure","Cardiac emergencies","Neurological emergencies","Trauma","Burns","Fluid resuscitation principles","Monitoring the critically ill","Critical care nursing"],notes:{}},
+"Nutrition & Dietetics":{i:"🥗",topics:["Nutrition principles","Carbohydrates","Proteins","Fats","Vitamins","Minerals","Water","Balanced diet","Nutritional assessment","Malnutrition","Therapeutic diets","Diabetes diet principles","Renal diets","Enteral nutrition","Parenteral nutrition"],notes:{}},
+"Research & Statistics":{i:"📊",topics:["Introduction to nursing research","Research problem","Literature review","Objectives","Research questions","Hypothesis","Variables","Research designs","Qualitative research","Quantitative research","Sampling","Data collection","Validity and reliability","Data analysis","Descriptive statistics","Research ethics","Research proposal","Dissemination of findings"],notes:{}},
+"Leadership & Management":{i:"👩‍⚕️",topics:["Leadership concepts","Leadership styles","Management functions","Planning","Organizing","Staffing","Directing","Controlling","Delegation","Supervision","Teamwork","Motivation","Conflict management","Time management","Quality improvement","Nursing administration"],notes:{}},
+"Health Informatics":{i:"💻",topics:["Health information systems","Electronic health records","Data quality","Information security","Patient privacy","Digital health","Telehealth","Clinical decision support","Nursing documentation systems","Health data and reporting"],notes:{}},
+"Clinical Skills & Practicum":{i:"🧤",topics:["Hand hygiene","PPE","Patient identification","Vital signs","Health assessment","Bed making","Patient positioning","Oral medication","Injections","IV therapy","Catheterization principles","Wound dressing","Specimen collection","Oxygen therapy","Nasogastric tube care","Aseptic technique","Nursing documentation","Care plans","Patient education","Clinical handover"]},
+"Research Project & Final Preparation":{i:"🎓",topics:["Project proposal","Literature review","Methodology","Data collection","Data analysis","Research report","Presentation and viva","Clinical case presentation","Integrated revision","CAT practice","Final examination practice","Professional preparation"],notes:{}}
+};
+
+// Topic-specific starter explanations. Additional topics use a consistent nursing-study template.
+const starterNotes={
+"Nursing process":"The nursing process is a systematic method of providing individualized care: Assessment → Nursing diagnosis → Planning → Implementation → Evaluation. Assessment gathers subjective and objective data; diagnosis identifies patient responses; planning sets measurable goals; implementation carries out interventions; evaluation determines whether outcomes were achieved.",
+"Vital signs":"Core vital signs include temperature, pulse, respiration and blood pressure. Measure using correct technique, document the value and time, compare with baseline, and report significant changes according to clinical policy.",
+"Classical conditioning":"Classical conditioning describes learning through association between stimuli. Pavlov's experiments with dogs are a classic example. In nursing and psychology, the concept helps explain how some responses can become associated with previously neutral cues.",
+"Maslow hierarchy":"Maslow's hierarchy is commonly described as physiological needs, safety, love/belonging, esteem and self-actualization. In nursing, prioritization begins with immediate physiological and safety needs while considering the whole person.",
+"Fetal circulation":"Fetal circulation uses the placenta for gas and nutrient exchange. Special pathways such as the ductus venosus, foramen ovale and ductus arteriosus help direct highly oxygenated blood toward vital organs before birth.",
+"Normal labour":"Normal labour involves regular uterine contractions causing progressive cervical effacement and dilatation, followed by birth of the baby and placenta. Nursing care includes maternal and fetal assessment, emotional support, infection prevention and timely recognition of complications.",
+"Partograph":"A partograph is a labour monitoring tool used to record cervical dilatation and other maternal and fetal observations. It supports early recognition of abnormal labour and prompts appropriate review or referral according to local protocols.",
+"Gestational diabetes":"Gestational diabetes is glucose intolerance first recognized during pregnancy. Nursing care includes glucose monitoring, nutrition and activity education as appropriate, medication support when prescribed, maternal-fetal monitoring and follow-up after pregnancy.",
+"Chronic wounds":"Chronic wounds are wounds that fail to progress through normal healing in an expected time. Common contributing factors include poor perfusion, diabetes, infection, pressure, malnutrition and repeated trauma. Assessment should include wound characteristics, surrounding tissue, pain, circulation and infection signs.",
+"Septic wounds":"A septic or infected wound contains pathogenic microorganisms causing a local or potentially systemic inflammatory response. Nursing priorities include assessment, prescribed antimicrobial therapy, appropriate wound care, aseptic technique, pain management, nutrition and monitoring for systemic deterioration.",
+"Medication calculations":"Medication calculations require accurate interpretation of the prescription, available strength, required dose and appropriate units. Recheck calculations and follow institutional medication-safety procedures, especially for high-alert medicines.",
+"Chain of infection":"The chain of infection describes six links: infectious agent, reservoir, portal of exit, mode of transmission, portal of entry and susceptible host. Infection prevention works by breaking one or more links.",
+"Primary health care":"Primary health care emphasizes accessible essential care, health promotion, prevention, community participation, appropriate technology and intersectoral collaboration.",
+"Home visits":"Home visits allow assessment of the person and family in their usual environment, health education, follow-up and support. Privacy, consent, safety and professional boundaries should be maintained.",
+"Therapeutic communication":"Therapeutic communication uses purposeful techniques such as active listening, empathy, clarification, reflection and appropriate questioning to support patient care and trust.",
+"Beneficence":"Beneficence means acting to promote the patient's welfare and wellbeing while considering benefits and possible harms.",
+"Confidentiality":"Patient information should be protected and disclosed only with appropriate authorization or where disclosure is required by law or necessary for legitimate clinical purposes.",
+"Pharmacokinetics and pharmacodynamics":"Pharmacokinetics describes what the body does to a drug: absorption, distribution, metabolism and excretion. Pharmacodynamics describes what the drug does to the body, including its effects and mechanisms of action.",
+"Research process":"A basic research process includes identifying a problem, reviewing literature, setting objectives or questions, selecting a suitable design, collecting and analysing data, interpreting findings and communicating results.",
+"Shock":"Shock is a state of inadequate tissue perfusion and oxygen delivery. Nursing priorities include rapid assessment, airway and breathing support, circulation assessment, monitoring, prescribed fluid or other therapy, identifying the cause and urgent escalation."
+};
+for(const [subject,s] of Object.entries(data)){
+  for(const topic of s.topics){
+    if(!s.notes[topic]) s.notes[topic]=starterNotes[topic] ||
+      `${topic} — nursing revision guide. Review the definition, objectives, classifications, causes or risk factors, pathophysiology, signs and symptoms, assessment, investigations, management, nursing interventions, complications, prevention and patient education. Use your institution's current syllabus, clinical guidelines and lecturer notes for detailed practice.`;
+  }
+}
+let progress=JSON.parse(localStorage.getItem("nursingProgress")||"{}");
+function renderSubjects(filter=""){const box=document.getElementById("subjects");box.innerHTML="";Object.entries(data).filter(([n,s])=>(n+" "+s.topics.join(" ")+" "+Object.values(s.notes||{}).join(" ")).toLowerCase().includes(filter.toLowerCase())).forEach(([name,s])=>{box.innerHTML+=`<div class="card" onclick="openSubject(${JSON.stringify(name)})"><div class="icon">${s.i}</div><b>${name}</b><small>${s.topics.length} core topics</small></div>`})}
+function searchSubjects(){renderSubjects(document.getElementById("search").value)}
+function openSubject(name){document.getElementById("home").classList.add("hidden");let s=data[name];let c=document.getElementById("content");c.classList.remove("hidden");c.innerHTML=`<button class="secondary back" onclick="goHome()">← Subjects</button><h2>${s.i} ${name}</h2><div class="grid">${s.topics.map(t=>`<div class="card" onclick="openNote(${JSON.stringify(name)},${JSON.stringify(t)})"><b>${t}</b><small>Open notes</small></div>`).join("")}</div>`}
+function openNote(subject,topic){let text=data[subject].notes[topic]||"Revision content for this topic can be added here. Use your class notes and current clinical guidelines.";let key=subject+"|"+topic;document.getElementById("content").innerHTML=`<button class="secondary back" onclick="openSubject(${JSON.stringify(subject)})">← Back</button><div class="note"><h2>${topic}</h2><p>${text}</p><button onclick="toggleDone(${JSON.stringify(key)},this)">${progress[key]?"✓ Completed":"Mark as completed"}</button></div>`}
+function toggleDone(k,b){progress[k]=!progress[k];localStorage.setItem("nursingProgress",JSON.stringify(progress));b.textContent=progress[k]?"✓ Completed":"Mark as completed"}
+function goHome(){document.getElementById("content").classList.add("hidden");document.getElementById("home").classList.remove("hidden");renderSubjects(document.getElementById("search").value)}
+const qs=[
+["What is the first step of the nursing process?",["Assessment","Planning","Evaluation","Implementation"],0],
+["Which structure is the functional unit of the kidney?",["Alveolus","Nephron","Neuron","Sarcomere"],1],
+["ADME stands for absorption, distribution, metabolism and…",["Elimination","Excretion","Evaluation","Equilibrium"],1],
+["Which is a positive sign of pregnancy?",["Nausea","Amenorrhea","Fetal heart activity","Breast tenderness"],2],
+["Which is an agent of socialisation?",["Family","Blood pressure","Nephron","Oxygen"],0]
+];
+let qi=0,score=0;
+function showQuiz(){document.getElementById("home").classList.add("hidden");let c=document.getElementById("content");c.classList.remove("hidden");qi=0;score=0;quizQuestion()}
+function quizQuestion(){let q=qs[qi];document.getElementById("content").innerHTML=`<button class="secondary back" onclick="goHome()">← Subjects</button><div class="quiz"><small>Question ${qi+1} of ${qs.length}</small><h2>${q[0]}</h2>${q[1].map((o,i)=>`<button class="option" onclick="answer(${i})">${o}</button>`).join("")}</div>`}
+function answer(i){let q=qs[qi];document.querySelectorAll(".option").forEach((b,j)=>{b.disabled=true;if(j===q[2])b.classList.add("correct");if(j===i&&i!==q[2])b.classList.add("wrong")});if(i===q[2])score++;setTimeout(()=>{qi++;if(qi<qs.length)quizQuestion();else document.getElementById("content").innerHTML=`<button class="secondary back" onclick="goHome()">← Subjects</button><div class="note"><h2>Quiz complete 🎉</h2><p>Your score: <b>${score}/${qs.length}</b></p><button onclick="showQuiz()">Try again</button></div>`},650)}
+function showProgress(){document.getElementById("home").classList.add("hidden");let c=document.getElementById("content");c.classList.remove("hidden");let done=Object.values(progress).filter(Boolean).length;c.innerHTML=`<button class="secondary back" onclick="goHome()">← Subjects</button><div class="note"><h2>📈 Your progress</h2><p>Topics completed: <b>${done}</b></p><p>Keep studying a little every day and use MCQs to test recall.</p></div>`}
+renderSubjects();
+</script>
+</body></html>
+<section class="download-card" id="about">
+  <h2>How premium downloads work</h2>
+  <p>Choose a subject → select a revision pack → pay KSh 50 → receive access to the purchased download.</p>
+  <p class="disclosure">The administrator controls which materials are paid, the price, and the download access.</p>
+</section>
