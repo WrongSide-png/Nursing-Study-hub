@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Downloads — Nursing Study Hub Kenya</title><style>
+:root{--n:#063b57;--t:#087e8b;--g:#1b7f5a;--ink:#162235;--m:#667085}*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Arial;background:#f5f8fb;color:var(--ink)}
+.top{position:sticky;top:0;z-index:10;background:var(--n);color:#fff;padding:13px 16px;display:flex;justify-content:space-between;gap:10px}
+.brand{font-weight:900}.nav{display:flex;gap:12px}.nav a{color:#fff;text-decoration:none;font-weight:700}
+.wrap{max-width:1100px;margin:auto;padding:0 16px}.hero{margin:18px 0;padding:34px 22px;border-radius:22px;background:linear-gradient(135deg,var(--n),var(--t));color:#fff}
+.hero h1{font-size:clamp(30px,7vw,52px);margin:10px 0}.hero p{font-size:18px;line-height:1.5}.btn{display:inline-block;padding:12px 17px;border:0;border-radius:10px;background:var(--n);color:#fff;text-decoration:none;font-weight:800;cursor:pointer}.gold{background:#f4c95d;color:#111}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 4px 18px #0001}.media{aspect-ratio:16/9;border-radius:13px;background:linear-gradient(135deg,#dceff3,#eef4f8);display:flex;align-items:center;justify-content:center;font-size:50px}
+.title{padding:25px 0 10px}.muted{color:var(--m)}.pill{display:inline-block;padding:5px 9px;border-radius:99px;background:#e7f4ef;color:#155d45;font-weight:800;font-size:12px}
+.notice{background:#fff4cf;border-left:5px solid #e1a900;padding:14px;border-radius:10px}.small{font-size:12px;color:var(--m)}
+footer{margin-top:35px;background:#082f44;color:#fff;padding:25px 16px}
+@media(max-width:600px){.nav{font-size:13px;gap:8px}}
+</style></head><body><header class="top"><div class="brand">🩺 Nursing Study Hub Kenya</div><nav class="nav"><a href="index.html">Home</a><a href="videos.html">Videos</a><a href="premium.html">Downloads</a></nav></header><main class="wrap">
+<section class="title"><span class="pill">🔒 Premium</span><h1>Download Notes & Questions</h1><p class="muted">Affordable revision packs for Kenyan nursing students.</p></section>
+<div class="notice"><b>Secure M-Pesa checkout:</b> select a pack and enter your own M-Pesa number. The administrator's personal M-Pesa number is not displayed.</div>
+<div class="grid" style="margin-top:16px"><div class="card"><h3>Fundamentals of Nursing</h3><p>Notes + revision questions.</p><b>KSh 50</b><br><button class="btn" onclick="choose('Fundamentals of Nursing')">Buy pack</button></div><div class="card"><h3>Midwifery Revision</h3><p>Notes + revision questions.</p><b>KSh 50</b><br><button class="btn" onclick="choose('Midwifery Revision')">Buy pack</button></div><div class="card"><h3>Medical-Surgical Nursing</h3><p>Notes + revision questions.</p><b>KSh 50</b><br><button class="btn" onclick="choose('Medical-Surgical Nursing')">Buy pack</button></div><div class="card"><h3>Pharmacology Revision</h3><p>Notes + revision questions.</p><b>KSh 50</b><br><button class="btn" onclick="choose('Pharmacology Revision')">Buy pack</button></div></div>
+<div class="card" style="margin-top:18px"><h2>M-Pesa checkout</h2><label>Selected pack</label><input id="product" readonly style="display:block;width:100%;max-width:420px;padding:12px;margin:7px 0 12px"><label>Your M-Pesa number</label><input id="phone" placeholder="07XXXXXXXX" inputmode="numeric" style="display:block;width:100%;max-width:420px;padding:12px;margin:7px 0 12px"><button class="btn gold" onclick="pay()">Pay KSh 50</button><p id="status" class="muted"></p><p class="small">Your phone number is used for the payment request and is not displayed publicly. Real payment verification must happen on the server before releasing files.</p></div>
+</main><footer><div class="wrap">🩺 Nursing Study Hub Kenya</div></footer>
+<script>
+function choose(x){document.getElementById('product').value=x;document.getElementById('product').scrollIntoView({behavior:'smooth'})}
+function pay(){let p=document.getElementById('phone').value.replace(/\s/g,'');let s=document.getElementById('status');if(!/^(07\d{8}|2547\d{8})$/.test(p)){s.textContent='Enter a valid Kenyan mobile number.';return}s.textContent='Secure M-Pesa payment service will be connected here.'}
+</script></body></html>
